@@ -1,3 +1,3 @@
 # Puzzle
 A simple puzzle demo.
-[!Screeshot](img/demo.jpg)
+[!Screeshot](https://github.com/Azure0Sky/Puzzle/blob/master/img/demo.jpg)
