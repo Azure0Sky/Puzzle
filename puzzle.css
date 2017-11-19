@@ -1,0 +1,220 @@
+body {
+    margin: 0;
+    position: relative;
+    font-family: 'Comic Sans MS', sans-serif;
+    background-color: rgb(248, 248, 248);
+}
+
+h1 {
+    text-align: center;
+}
+
+#game-container {
+    position: absolute;
+    width: 800px;
+    height: 820px;
+    left: 50%;
+    margin-left: -400px;
+}
+
+#selector-container {
+    position: absolute;
+    top: 256px;
+    left: 5%;
+    transform: translateY(-50%);
+}
+
+.selector {
+    background-color: rgb(231, 231, 231);
+    width: 26px;
+    height: 26px;
+    border-radius: 100%;
+    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.18) inset,
+                -1px -1px 3px 1px rgba(0, 0, 0, 0.18) inset;
+    cursor: pointer;
+    margin: 150% 0;
+}
+
+.on {
+    background-color: rgb(66, 133, 244);
+    box-shadow: none;
+}
+
+.selector:hover {
+    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.18) inset,
+                -1px -1px 3px 1px rgba(0, 0, 0, 0.18) inset,
+                1.5px 1.5px 3px 1px rgba(0, 0, 0, 0.18);
+}
+
+#status {
+    position: absolute;
+    left: 90%;
+    font-size: 300%;
+}
+
+#original-picture {
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    left: 90%;
+    top: 256px;
+    margin-top: -150px;
+}
+
+#puzzle-container {
+    width: 512px;
+    height: 512px;
+    margin: auto;
+    border: 5px ridge rgba(0, 0, 0, 0.3);
+}
+
+.puzzle-piece {
+    width: 128px;
+    height: 128px;
+    display: inline-block;
+    float: left;
+    position: relative;
+}
+
+.puzzle-piece div:hover {
+    transform: scale(1.1, 1.1);
+    transition-duration: 0.3s;
+    z-index: 999;
+}
+
+.puzzle-piece div {
+    width: 99%;
+    height: 99%;
+    outline: rgb(210, 210, 210) solid 2px;
+    position: relative;
+}
+
+.panda {
+    background-image: url('img/Po.png');
+}
+
+.sen {
+    background-image: url('img/sen3.png');
+}
+
+.puzzle-piece:nth-child(1) .panda,
+.puzzle-piece:nth-child(1) .sen {
+    background-position: 0 0;
+}
+
+.puzzle-piece:nth-child(2) .panda,
+.puzzle-piece:nth-child(2) .sen {
+    background-position: -128px 0;
+}
+
+.puzzle-piece:nth-child(3) .panda,
+.puzzle-piece:nth-child(3) .sen {
+    background-position: -256px 0;
+}
+
+.puzzle-piece:nth-child(4) .panda,
+.puzzle-piece:nth-child(4) .sen {
+    background-position: -384px 0;
+}
+
+.puzzle-piece:nth-child(5) .panda,
+.puzzle-piece:nth-child(5) .sen {
+    background-position: 0 -128px;
+}
+
+.puzzle-piece:nth-child(6) .panda,
+.puzzle-piece:nth-child(6) .sen {
+    background-position: -128px -128px;
+}
+
+.puzzle-piece:nth-child(7) .panda,
+.puzzle-piece:nth-child(7) .sen {
+    background-position: -256px -128px;
+}
+
+.puzzle-piece:nth-child(8) .panda,
+.puzzle-piece:nth-child(8) .sen {
+    background-position: -384px -128px;
+}
+
+.puzzle-piece:nth-child(9) .panda,
+.puzzle-piece:nth-child(9) .sen {
+    background-position: 0 -256px;
+}
+
+.puzzle-piece:nth-child(10) .panda,
+.puzzle-piece:nth-child(10) .sen {
+    background-position: -128px -256px;
+}
+
+.puzzle-piece:nth-child(11) .panda,
+.puzzle-piece:nth-child(11) .sen {
+    background-position: -256px -256px;
+}
+
+.puzzle-piece:nth-child(12) .panda,
+.puzzle-piece:nth-child(12) .sen {
+    background-position: -384px -256px;
+}
+
+.puzzle-piece:nth-child(13) .panda, 
+.puzzle-piece:nth-child(13) .sen {
+    background-position: 0 -384px;
+}
+
+.puzzle-piece:nth-child(14) .panda,
+.puzzle-piece:nth-child(14) .sen {
+    background-position: -128px -384px;
+}
+
+.puzzle-piece:nth-child(15) .panda,
+.puzzle-piece:nth-child(15) .sen {
+    background-position: -256px -384px;
+}
+
+#start-button, #show-button {
+    color: white;
+    border-radius: 3px;
+    margin: auto;
+    margin-top: 4%;
+    cursor: pointer;
+    text-align: center;
+    width: 150px;
+}
+
+#start-button {
+    background-color: rgb(66, 133, 244);
+    height: 50px;
+    font-size: 150%;
+    line-height: 50px;
+    box-shadow: 7px 7px 8px 1px rgba(0, 0, 0, 0.3);
+}
+
+#start-button:hover {
+    background-color: rgb(54, 123, 233);
+}
+
+#start-button:active {
+    position: relative;
+    top: 1.5px;
+    box-shadow: 6px 6px 8px 1px rgba(0, 0, 0, 0.3);
+}
+
+#show-button {
+    background-color: rgb(52, 168, 83);
+    height: 40px;
+    font-size: 105%;
+    line-height: 40px;
+    box-shadow: 4px 4px 8px 1px rgba(0, 0, 0, 0.3);
+}
+
+#show-button:hover {
+    background-color: #32A14F;
+}
+
+#show-button:active {
+    position: relative;
+    top: 1.5px;
+    box-shadow: 3px 3px 8px 1px rgba(0, 0, 0, 0.3);
+}
